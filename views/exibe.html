@@ -1,0 +1,29 @@
+<div class="container">
+    <a href="/"><button class="btn btn-danger">Voltar</button></a>
+    <table class="table">
+        <tr>
+            <th scope="row">Resultado</th>
+            {loop="$resultado"}
+            <td>{$value}</td>
+            {/loop}
+        </tr>
+    </table>
+    <table class="table table-striped">
+        {loop="$jogos"}
+        <tr>
+            <th scope="row">Jogo {$key+1}</th>
+            {loop="$value"}
+            <td>{$value}</td>
+            {/loop}
+        </tr>
+        {/loop}
+    </table>
+    {loop="$acertos"}
+    <div class="d-flex justify-content-start">
+        <h6>Acertos Jogo {$key+1} :</h6>
+        {loop="$value"}
+        <p class="ml-4">{$value}</p>
+        {/loop}
+    </div>
+    {/loop}
+</div>

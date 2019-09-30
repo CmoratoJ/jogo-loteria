@@ -1,9 +1,9 @@
-<div class="container col-md-4">
-    {if="$mensagem != ''"}
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="container col-md-4">
+    <?php if( $mensagem != '' ){ ?>
         <div class="alert alert-danger" role="alert">
-            {$mensagem}
+            <?php echo htmlspecialchars( $mensagem, ENT_COMPAT, 'UTF-8', FALSE ); ?>
         </div>
-    {/if}
+    <?php } ?>
     <h1 class="text-center">Jogo Loteria</h1>
     <form action="/exibe" method="get">
         <div class="form-group">
