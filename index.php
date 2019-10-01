@@ -35,6 +35,7 @@ $app->post('/exibe', function() {
     if (count($jogos[0]) < 6 || count($jogos[0]) > 10) {
         $_SESSION['msg'] = 'A quantidade mínima de dezenas para jogar é 6 e a máxima é 10!';
         header("Location: /");
+        exit;
     } else {
         $page->setTpl("exibe", array(
             "jogos" => $jogos,
